@@ -1,4 +1,13 @@
 # Put some miscellaneous rules here
+#
+# Build system colors
+#
+# PFX: Prefix "target C++:" in yellow
+# INS: Module "Install:" output color (cyan for ics)
+
+ifneq ($(BUILD_WITH_COLORS),0)
+    include $(TOP_DIR)build/core/colors.mk
+endif
 
 # HACK: clear LOCAL_PATH from including last build target before calling
 # intermedites-dir-for
@@ -3048,8 +3057,32 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) \
 	   $(if $(OEM_OTA_CONFIG), -o $(OEM_OTA_CONFIG)) \
 	   $(BUILT_TARGET_FILES_PACKAGE) $@
 
-.PHONY: otapackage
+CHIDORI_TARGET_PACKAGE := $(PRODUCT_OUT)/$(CHIDORI_VERSION).zip
+
+.PHONY: otapackage bacon
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
+bacon: otapackage
+	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CHIDORI_TARGET_PACKAGE)
+	$(hide) $(MD5SUM) $(CHIDORI_TARGET_PACKAGE) > $(CHIDORI_TARGET_PACKAGE).md5sum
+	@echo -e ${CL_BLU}""${CL_BLU}
+	@echo -e ${CL_BLU}"        CCCCCCCCCCCCC     HHHHHHHHH     HHHHHHHHH     IIIIIIIIII     DDDDDDDDDDDDD                  OOOOOOOOO          RRRRRRRRRRRRRRRRR        IIIIIIIIII"${CL_BLU}
+	@echo -e ${CL_BLU}"     CCC::::::::::::C     H:::::::H     H:::::::H     I::::::::I     D::::::::::::DDD             OO:::::::::OO        R::::::::::::::::R       I::::::::I"${CL_BLU}
+	@echo -e ${CL_BLU}"   CC:::::::::::::::C     H:::::::H     H:::::::H     I::::::::I     D:::::::::::::::DD         OO:::::::::::::OO      R::::::RRRRRR:::::R      I::::::::I"${CL_BLU}
+	@echo -e ${CL_BLU}"  C:::::CCCCCCCC::::C     HH::::::H     H::::::HH     II::::::II     DDD:::::DDDDD:::::D       O:::::::OOO:::::::O     RR:::::R     R:::::R     II::::::II"${CL_BLU}
+	@echo -e ${CL_BLU}" C:::::C       CCCCCC       H:::::H     H:::::H         I::::I         D:::::D    D:::::D      O::::::O   O::::::O       R::::R     R:::::R       I::::I  "${CL_BLU}
+	@echo -e ${CL_BLU}"C:::::C                     H:::::H     H:::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::R     R:::::R       I::::I  "${CL_BLU}
+	@echo -e ${CL_BLU}"C:::::C                     H::::::HHHHH::::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::RRRRRR:::::R        I::::I  "${CL_BLU}
+	@echo -e ${CL_BLU}"C:::::C                     H:::::::::::::::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R:::::::::::::RR         I::::I  "${CL_BLU}
+	@echo -e ${CL_BLU}"C:::::C                     H:::::::::::::::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::RRRRRR:::::R        I::::I  "${CL_BLU}
+	@echo -e ${CL_BLU}"C:::::C                     H::::::HHHHH::::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::R     R:::::R       I::::I  "${CL_BLU}
+	@echo -e ${CL_BLU}"C:::::C                     H:::::H     H:::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::R     R:::::R       I::::I  "${CL_BLU}
+	@echo -e ${CL_BLU}" C:::::C       CCCCCC       H:::::H     H:::::H         I::::I         D:::::D    D:::::D      O::::::O   O::::::O       R::::R     R:::::R       I::::I  "${CL_BLU}
+	@echo -e ${CL_BLU}"  C:::::CCCCCCCC::::C     HH::::::H     H::::::HH     II::::::II     DDD:::::DDDDD:::::D       O:::::::OOO:::::::O     RR:::::R     R:::::R     II::::::II"${CL_BLU}
+	@echo -e ${CL_BLU}"   CC:::::::::::::::C     H:::::::H     H:::::::H     I::::::::I     D:::::::::::::::DD         OO:::::::::::::OO      R::::::R     R:::::R     I::::::::I"${CL_BLU}
+	@echo -e ${CL_BLU}"     CCC::::::::::::C     H:::::::H     H:::::::H     I::::::::I     D::::::::::::DDD             OO:::::::::OO        R::::::R     R:::::R     I::::::::I"${CL_BLU}
+	@echo -e ${CL_BLU}"        CCCCCCCCCCCCC     HHHHHHHHH     HHHHHHHHH     IIIIIIIIII     DDDDDDDDDDDDD                  OOOOOOOOO          RRRRRRRR     RRRRRRR     IIIIIIIIII"${CL_BLU}
+	@echo -e ${CL_BLU}""${CL_BLU}
+	@echo -e "Package complete: $(CHIDORI_TARGET_PACKAGE)"
 
 endif    # build_ota_package
 
