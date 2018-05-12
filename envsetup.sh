@@ -637,13 +637,13 @@ function lunch()
         # if we can't find a product, try to grab it off the custom GitHub
         T=$(gettop)
         cd $T > /dev/null
-        vendor/custom/build/tools/roomservice.py $product
+        vendor/chidori/build/tools/roomservice.py $product
         cd - > /dev/null
         check_product $product
     else
         T=$(gettop)
         cd $T > /dev/null
-        vendor/custom/build/tools/roomservice.py $product true
+        vendor/chidori/build/tools/roomservice.py $product true
         cd - > /dev/null
     fi
 
