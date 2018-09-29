@@ -1722,6 +1722,7 @@ function make()
 	        return $RET
 	    fi
     fi
+    _wrap_build $(get_make_command hals) hals ALLOW_MISSING_DEPENDENCIES=true
     mk_timer $(get_make_command) "$@"
 }
 
