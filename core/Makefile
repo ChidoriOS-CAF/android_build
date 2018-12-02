@@ -3064,23 +3064,15 @@ otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
 bacon: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CHIDORI_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(CHIDORI_TARGET_PACKAGE) > $(CHIDORI_TARGET_PACKAGE).md5sum
-	@echo -e ${CL_BLU}""${CL_BLU}
-	@echo -e ${CL_BLU}"        CCCCCCCCCCCCC     HHHHHHHHH     HHHHHHHHH     IIIIIIIIII     DDDDDDDDDDDDD                  OOOOOOOOO          RRRRRRRRRRRRRRRRR        IIIIIIIIII"${CL_BLU}
-	@echo -e ${CL_BLU}"     CCC::::::::::::C     H:::::::H     H:::::::H     I::::::::I     D::::::::::::DDD             OO:::::::::OO        R::::::::::::::::R       I::::::::I"${CL_BLU}
-	@echo -e ${CL_BLU}"   CC:::::::::::::::C     H:::::::H     H:::::::H     I::::::::I     D:::::::::::::::DD         OO:::::::::::::OO      R::::::RRRRRR:::::R      I::::::::I"${CL_BLU}
-	@echo -e ${CL_BLU}"  C:::::CCCCCCCC::::C     HH::::::H     H::::::HH     II::::::II     DDD:::::DDDDD:::::D       O:::::::OOO:::::::O     RR:::::R     R:::::R     II::::::II"${CL_BLU}
-	@echo -e ${CL_BLU}" C:::::C       CCCCCC       H:::::H     H:::::H         I::::I         D:::::D    D:::::D      O::::::O   O::::::O       R::::R     R:::::R       I::::I  "${CL_BLU}
-	@echo -e ${CL_BLU}"C:::::C                     H:::::H     H:::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::R     R:::::R       I::::I  "${CL_BLU}
-	@echo -e ${CL_BLU}"C:::::C                     H::::::HHHHH::::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::RRRRRR:::::R        I::::I  "${CL_BLU}
-	@echo -e ${CL_BLU}"C:::::C                     H:::::::::::::::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R:::::::::::::RR         I::::I  "${CL_BLU}
-	@echo -e ${CL_BLU}"C:::::C                     H:::::::::::::::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::RRRRRR:::::R        I::::I  "${CL_BLU}
-	@echo -e ${CL_BLU}"C:::::C                     H::::::HHHHH::::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::R     R:::::R       I::::I  "${CL_BLU}
-	@echo -e ${CL_BLU}"C:::::C                     H:::::H     H:::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::R     R:::::R       I::::I  "${CL_BLU}
-	@echo -e ${CL_BLU}" C:::::C       CCCCCC       H:::::H     H:::::H         I::::I         D:::::D    D:::::D      O::::::O   O::::::O       R::::R     R:::::R       I::::I  "${CL_BLU}
-	@echo -e ${CL_BLU}"  C:::::CCCCCCCC::::C     HH::::::H     H::::::HH     II::::::II     DDD:::::DDDDD:::::D       O:::::::OOO:::::::O     RR:::::R     R:::::R     II::::::II"${CL_BLU}
-	@echo -e ${CL_BLU}"   CC:::::::::::::::C     H:::::::H     H:::::::H     I::::::::I     D:::::::::::::::DD         OO:::::::::::::OO      R::::::R     R:::::R     I::::::::I"${CL_BLU}
-	@echo -e ${CL_BLU}"     CCC::::::::::::C     H:::::::H     H:::::::H     I::::::::I     D::::::::::::DDD             OO:::::::::OO        R::::::R     R:::::R     I::::::::I"${CL_BLU}
-	@echo -e ${CL_BLU}"        CCCCCCCCCCCCC     HHHHHHHHH     HHHHHHHHH     IIIIIIIIII     DDDDDDDDDDDDD                  OOOOOOOOO          RRRRRRRR     RRRRRRR     IIIIIIIIII"${CL_BLU}
+	@echo -e ${CL_BLU}""${CL_BLU}                                          
+	@echo -e ${CL_BLU}"  ,ad8888ba,   88        88  88  88888888ba,      ,ad8888ba,    88888888ba   88"${CL_BLU} 
+	@echo -e ${CL_BLU}" d8"'    `"8b  88        88  88  88      `"8b    d8"'    `"8b   88      "8b  88"${CL_BLU} 
+	@echo -e ${CL_BLU}"d8'            88        88  88  88        `8b  d8'        `8b  88      ,8P  88"${CL_BLU}   
+	@echo -e ${CL_BLU}"88             88aaaaaaaa88  88  88         88  88          88  88aaaaaa8P'  88"${CL_BLU}   
+	@echo -e ${CL_BLU}"88             88""""""""88  88  88         88  88          88  88""""88'    88"${CL_BLU}   
+	@echo -e ${CL_BLU}"Y8,            88        88  88  88         8P  Y8,        ,8P  88    `8b    88"${CL_BLU}   
+	@echo -e ${CL_BLU}" Y8a.    .a8P  88        88  88  88      .a8P    Y8a.    .a8P   88     `8b   88"${CL_BLU} 
+	@echo -e ${CL_BLU}"  `"Y8888Y"'   88        88  88  88888888Y"'      `"Y8888Y"'    88      `8b  88"${CL_BLU}   
 	@echo -e ${CL_BLU}""${CL_BLU}
 	@echo -e "Package complete: $(CHIDORI_TARGET_PACKAGE)"
 

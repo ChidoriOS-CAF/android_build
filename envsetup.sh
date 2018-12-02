@@ -510,26 +510,19 @@ function print_lunch_menu()
 
     echo ""
     tput setaf 1;
-    tput bold;                                                
-    echo "        CCCCCCCCCCCCC     HHHHHHHHH     HHHHHHHHH     IIIIIIIIII     DDDDDDDDDDDDD                  OOOOOOOOO          RRRRRRRRRRRRRRRRR        IIIIIIIIII";
-    echo "     CCC::::::::::::C     H:::::::H     H:::::::H     I::::::::I     D::::::::::::DDD             OO:::::::::OO        R::::::::::::::::R       I::::::::I";
-    echo "   CC:::::::::::::::C     H:::::::H     H:::::::H     I::::::::I     D:::::::::::::::DD         OO:::::::::::::OO      R::::::RRRRRR:::::R      I::::::::I";
-    echo "  C:::::CCCCCCCC::::C     HH::::::H     H::::::HH     II::::::II     DDD:::::DDDDD:::::D       O:::::::OOO:::::::O     RR:::::R     R:::::R     II::::::II";
-    echo " C:::::C       CCCCCC       H:::::H     H:::::H         I::::I         D:::::D    D:::::D      O::::::O   O::::::O       R::::R     R:::::R       I::::I  ";
-    echo "C:::::C                     H:::::H     H:::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::R     R:::::R       I::::I  ";
-    echo "C:::::C                     H::::::HHHHH::::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::RRRRRR:::::R        I::::I  ";
-    echo "C:::::C                     H:::::::::::::::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R:::::::::::::RR         I::::I  ";
-    echo "C:::::C                     H:::::::::::::::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::RRRRRR:::::R        I::::I  ";
-    echo "C:::::C                     H::::::HHHHH::::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::R     R:::::R       I::::I  ";
-    echo "C:::::C                     H:::::H     H:::::H         I::::I         D:::::D     D:::::D     O:::::O     O:::::O       R::::R     R:::::R       I::::I  ";
-    echo " C:::::C       CCCCCC       H:::::H     H:::::H         I::::I         D:::::D    D:::::D      O::::::O   O::::::O       R::::R     R:::::R       I::::I  ";
-    echo "  C:::::CCCCCCCC::::C     HH::::::H     H::::::HH     II::::::II     DDD:::::DDDDD:::::D       O:::::::OOO:::::::O     RR:::::R     R:::::R     II::::::II";
-    echo "   CC:::::::::::::::C     H:::::::H     H:::::::H     I::::::::I     D:::::::::::::::DD         OO:::::::::::::OO      R::::::R     R:::::R     I::::::::I";
-    echo "     CCC::::::::::::C     H:::::::H     H:::::::H     I::::::::I     D::::::::::::DDD             OO:::::::::OO        R::::::R     R:::::R     I::::::::I";
-    echo "        CCCCCCCCCCCCC     HHHHHHHHH     HHHHHHHHH     IIIIIIIIII     DDDDDDDDDDDDD                  OOOOOOOOO          RRRRRRRR     RRRRRRR     IIIIIIIIII";
+    tput bold;
+    echo " ▄████████    ▄█    █▄     ▄█  ████████▄   ▄██████▄     ▄████████  ▄█  ";
+    echo "███    ███   ███    ███   ███  ███   ▀███ ███    ███   ███    ███ ███  ";
+    echo "███    █▀    ███    ███   ███▌ ███    ███ ███    ███   ███    ███ ███▌ ";
+    echo "███         ▄███▄▄▄▄███▄▄ ███▌ ███    ███ ███    ███  ▄███▄▄▄▄██▀ ███▌ ";
+    echo "███        ▀▀███▀▀▀▀███▀  ███▌ ███    ███ ███    ███ ▀▀███▀▀▀▀▀   ███▌ ";
+    echo "███    █▄    ███    ███   ███  ███    ███ ███    ███ ▀███████████ ███  ";
+    echo "███    ███   ███    ███   ███  ███   ▄███ ███    ███   ███    ███ ███  ";
+    echo "████████▀    ███    █▀    █▀   ████████▀   ▀██████▀    ███    ███ █▀   ";
+    echo "                                                       ███    ███      ";
     tput sgr0;
     echo ""
-    echo "                      Welcome to the device menu                      "
+    echo "                     Welcome to the device menu                       "
     echo ""
     tput bold;
     echo "     Below are all the devices currently available to be compiled     "
